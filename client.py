@@ -7,12 +7,12 @@ def main():
 
     # Create client socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect((server_ip, port))
+    client_socket.connect((server_ip, port)) # connect to the server ip address and port
 
     while True:
         try:
             # Get command from user
-            command = input("Enter command (or type 'exit' to quit): ")
+            command = input("Enter command (or type 'exit' or Ctrl + C to quit): ")
             if command.lower() == "exit":
                 break
 
@@ -23,7 +23,7 @@ def main():
             response = client_socket.recv(4096).decode()
             print(response)
 
-        except KeyboardInterrupt:
+        except KeyboardInterrupt: # Catch the Ctrl+C
             print("\nTerminating connection due to Ctrl+C...")
             break
 
