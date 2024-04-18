@@ -24,7 +24,7 @@ def Server(connected):
                         connected.sendall(error_msg)  # Send error message to client
         else:
             # process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-            process = subprocess.Popen(["powershell", "-Command", cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE) # using powershell
+            process = subprocess.Popen(["powershell", "-Command", cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE) # using powershell instead of command prompt
             output, error = process.communicate()
             if error:
                 output = error
@@ -42,7 +42,6 @@ def main():
         while True:
             connected, addr = s.accept() # Accepts a connection, obtaining a new socket for communication and the client's address.
             print('Connected to :', addr[0], ':', addr[1]) # print out the ip of the client and the port of the client 
-            # Create a new thread using threading.Thread
             thread = threading.Thread(target=Server, args=(connected,)) # Creates a new thread to handle the client
             thread.start()  # Start the thread execution
     except KeyboardInterrupt: #  Catches a keyboard interrupt (Ctrl+C).

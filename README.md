@@ -10,10 +10,10 @@ Groups are expected to:
 ## Group Info
 
 1. BI12-224 Nguyễn Trung Kiên - Group Leader
-2. Hoàng Quốc Minh Quân
+2. BI12-363 Hoàng Quốc Minh Quân
 3. BI12-265 Đinh Khánh Minh
-4. Nguyễn Khang Ninh
-5. Nguyễn Thái Dương
-6. Nguyễn Lê Nguyên
+4. BI12-341 Nguyễn Khang Ninh
+5. BI12-117 Nguyễn Thái Dương
+6. BI12-328 Nguyễn Lê Nguyên
 
-======================= Topic: Remote shell using raw socket (multiple clients) =======================
+# Topic: Remote shell using raw socket (multiple clients)
